@@ -1,0 +1,5 @@
+export const NUMBER_OF_DECKS = 6;
+
+export const NUMBER_OF_CARDS = 52*NUMBER_OF_DECKS;
+
+export const NUMBER_OF_CARD_TYPE = 4*NUMBER_OF_DECKS;
