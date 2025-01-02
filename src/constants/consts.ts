@@ -13,3 +13,5 @@ export const CardValues = {
     K: -1,
     A: -1,
 }
+
+export const NUMBER_OF_CARDS_IN_A_DECK = 52;

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RemainingCardType = exports.RemainingCards = exports.registerCard = exports.TrueCount = exports.Count = exports.DeckCount = exports.TotalCardCount = exports.resetTable = exports.resetDeckCounter = void 0;
+exports.RemainingCardType = exports.RemainingCards = exports.RemainingDecks = exports.registerCard = exports.TrueCount = exports.Count = exports.DeckCount = exports.TotalCardCount = exports.resetTable = exports.resetDeckCounter = void 0;
 const STARTING_PARAMS_1 = require("../STARTING_PARAMS");
 const consts_1 = require("./consts");
 const resetDeckCounter = () => {
@@ -31,7 +31,7 @@ exports.TotalCardCount = 0;
 exports.DeckCount = (0, exports.resetDeckCounter)();
 exports.Count = 0;
 (0, exports.resetTable)();
-const TrueCount = () => (exports.Count / STARTING_PARAMS_1.NUMBER_OF_DECKS);
+const TrueCount = () => (exports.Count / (0, exports.RemainingDecks)());
 exports.TrueCount = TrueCount;
 const registerCard = (card) => {
     exports.TotalCardCount++;
@@ -39,6 +39,10 @@ const registerCard = (card) => {
     exports.Count += consts_1.CardValues[card];
 };
 exports.registerCard = registerCard;
+const RemainingDecks = () => {
+    return Math.floor((STARTING_PARAMS_1.NUMBER_OF_CARDS - exports.TotalCardCount) / 52 + 1);
+};
+exports.RemainingDecks = RemainingDecks;
 const RemainingCards = () => (STARTING_PARAMS_1.NUMBER_OF_CARDS - exports.TotalCardCount);
 exports.RemainingCards = RemainingCards;
 const RemainingCardType = (card) => {

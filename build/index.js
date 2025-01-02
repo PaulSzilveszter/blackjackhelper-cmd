@@ -35,12 +35,11 @@ const interfaces_1 = require("./constants/interfaces");
 // registerCard("Q")
 // registerCard("J")
 function showData() {
+    console.clear();
     console.log("\n\n##########  DATA  ##########");
     console.log(functions_1.DeckCount);
     console.log(functions_1.Count);
     console.log(functions_1.TotalCardCount);
-    console.log((0, functions_1.RemainingCards)());
-    console.log((0, functions_1.RemainingCardType)("J"));
     console.log("$$$  " + (0, functions_2.TrueCount)() + "  $$$");
     console.log("######################\n\n");
 }

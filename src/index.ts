@@ -23,16 +23,17 @@ import { isValidCard } from './constants/interfaces';
 
 function showData(){
 
+    console.clear();
+
     console.log("\n\n##########  DATA  ##########")
 
 
 
 
     console.log(DeckCount)
-    console.log(Count)
     console.log(TotalCardCount)
-    console.log(RemainingCards())
-    console.log(RemainingCardType("J"))
+    console.log(`Count: ${Count}`)
+  
 
     console.log("$$$  " + TrueCount() + "  $$$")
 

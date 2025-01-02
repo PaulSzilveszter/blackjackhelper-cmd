@@ -32,7 +32,7 @@ export let DeckCount: DeckCounter = resetDeckCounter();
 export let Count: number = 0;
 resetTable();
 
-export const TrueCount = (): number => (Count / NUMBER_OF_DECKS)
+export const TrueCount = (): number => (Count / RemainingDecks())
 
 export const registerCard = (card: Card) => {
 
@@ -43,6 +43,11 @@ export const registerCard = (card: Card) => {
     Count+= CardValues[card];
 
 
+}
+
+
+export const RemainingDecks = ()=>{
+    return Math.floor((NUMBER_OF_CARDS-TotalCardCount)/52+1);
 }
 
 export const RemainingCards=()=>(NUMBER_OF_CARDS-TotalCardCount)
