@@ -4,14 +4,15 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "npm run build && node ."
+    "build": "esbuild src/index.ts --bundle --outfile=build/index.js --platform=node",
+    "start": "npm run build && node build/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "esbuild": "^0.24.2",
     "typescript": "^5.4.2"
   }
 }
