@@ -32,14 +32,14 @@ var NUMBER_OF_CARD_TYPE = 4 * NUMBER_OF_DECKS;
 
 // src/constants/consts.ts
 var CardValues = {
-  2: 1,
+  2: 0.5,
   3: 1,
   4: 1,
-  5: 1,
+  5: 1.5,
   6: 1,
-  7: 0,
+  7: 0.5,
   8: 0,
-  9: 0,
+  9: -0.5,
   10: -1,
   J: -1,
   Q: -1,
